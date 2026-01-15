@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Planner</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2a4e36" />
+  </head>
+  <body class="theme-pastel">
+    <div class="container">
+      <!-- Page 1 -->
+      <div class="page" id="page1">
+        <div class="page-header">Digital Planner📔</div>
+        <div class="year-title">2026</div>
+        <div
+          contenteditable="true"
+          class="tagline"
+          placeholder="Enter your tagline or motivational phrase..."
+        ></div>
+        <div class="buttons">
+          <button id="themeBtn">Change Theme</button>
+          <button id="helpBtn">How to Use</button>
+        </div>
+      </div>
+      <!-- Page 2: Vision Board -->
+      <div class="page" id="page2">
+        <h2>Vision Board</h2>
+        <div class="buttons">
+          <button id="addCardBtn">Add Card</button>
+        </div>
+        <div id="visionBoard"></div>
+      </div>
+      <input
+        type="file"
+        id="fileInput"
+        style="display: none"
+        accept="image/*"
+      />
+      <!-- Page 3: Goals Advanced -->
+      <div class="page" id="page3">
+        <h2>Goals</h2>
+        <div class="buttons">
+          <button id="addSectionBtn">Add Section</button>
+        </div>
+        <div id="goalsBoard"></div>
+      </div>
+      <!-- Page 4: Ideal Day & Life Vision -->
+      <div class="page" id="page4">
+        <h2>Ideal Day & Life Vision</h2>
+        <div
+          class="ideal-vision-card"
+          contenteditable="true"
+          id="idealVisionCard"
+          data-placeholder="Write your vision for your ideal day and your ideal life here..."
+        ></div>
+      </div>
+      <!-- Modal -->
+      <div class="modal" id="helpModal">
+        <div class="modal-content">
+          <h2>How to Use</h2>
+          <p>
+            You can scroll through all pages vertically, add images or text to
+            your Vision Board, delete cards, change themes, and add motivational
+            phrases. All content is saved automatically!
+          </p>
+          <button class="close-modal" id="closeHelp">Close</button>
+        </div>
+      </div>
+      <input
+        type="file"
+        id="fileInput"
+        style="display: none"
+        accept="image/*"
+      />
+      <!-- Page 5: Monthly Goals -->
+      <div class="page" id="page5">
+        <h2>Monthly Goals</h2>
+        <!-- Monthly Overview -->
+        <div class="monthly-overview" id="currentMonthTitle">January</div>
+        <!-- Months Buttons -->
+        <div class="months-bar" id="monthsBar"></div>
+        <!-- Monthly Cards -->
+        <div class="monthly-cards">
+          <div class="monthly-card-wrapper">
+            <div class="card-label">Monthly Goals</div>
+            <div
+              class="monthly-card"
+              data-type="goals"
+              contenteditable="true"
+              data-placeholder="Month goals..."
+            ></div>
+          </div>
+          <div class="monthly-card-wrapper">
+            <div class="card-label">Focus</div>
+            <div
+              class="monthly-card"
+              data-type="focus"
+              contenteditable="true"
+              data-placeholder="Main focus this month..."
+            ></div>
+          </div>
+          <div class="monthly-card-wrapper">
+            <div class="card-label">Notes</div>
+            <div
+              class="monthly-card"
+              data-type="notes"
+              contenteditable="true"
+              data-placeholder="Notes..."
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- Page 6: Weekly Planner -->
+      <div class="page" id="page6">
+        <div class="page-inner">
+          <h2>Weekly Planner</h2>
+          <!-- Weeks Container -->
+          <div class="weeks-container" id="weeksContainer"></div>
+        </div>
+      </div>
+      <!-- Page 7: Daily Planner -->
+      <div class="page" id="page7">
+        <div class="page-inner">
+          <h2>Daily Planner</h2>
+          <!-- Days of Month -->
+          <div id="daysContainer" class="days-container"></div>
+          <!-- Tasks Container -->
+          <div id="dailyTasksContainer" class="tasks-container"></div>
+          <!-- Add Task Button -->
+          <div class="buttons">
+            <button id="addDailyTaskBtn">+ Add Task</button>
+          </div>
+        </div>
+      </div>
+      <!-- Page 8 : Weekly Reviews -->
+      <div class="page" id="page8">
+        <div class="page-inner">
+          <h2>Weekly Reviews</h2>
+          <!-- Weekly Reviews Grid -->
+          <div id="weeklyReviewsContainer" class="reviews-grid"></div>
+        </div>
+      </div>
+      <!-- Page 9: Habit Tracker -->
+      <div class="page" id="page10">
+        <div class="page-inner">
+          <h2>Habit Tracker</h2>
+          <!-- Add Habit Button -->
+          <div class="buttons">
+            <button id="addHabitBtn">+ Add Habit</button>
+          </div>
+          <!-- Habits Container -->
+          <div id="habitsContainer" class="habits-container"></div>
+        </div>
+      </div>
+      <!-- Page 10: Monthly Reviews -->
+      <div class="page" id="page8">
+        <div class="page-inner">
+          <h2>Monthly Reviews</h2>
+          <!-- Monthly Reviews Grid -->
+          <div id="monthlyReviewsContainer" class="reviews-grid"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
