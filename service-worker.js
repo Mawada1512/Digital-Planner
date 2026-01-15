@@ -1,4 +1,4 @@
-const CACHE_NAME = "digital-planner-v3";
+const CACHE_NAME = "digital-planner-v4";
 const urlsToCache = [
   "/index.html",
   "/style.css",
